@@ -7,13 +7,6 @@ RAC中用于处理事件的类，可以把事件如何处理,事件中的数据�
     2. 在signalBlock中，创建RACSignal，并且作为signalBlock的返回值
     3. 执行命令 - (RACSignal *)execute:(id)input
 
-
-* RACCommand使用步骤:
-
-1. 创建命令 initWithSignalBlock:(RACSignal * (^)(id input))signalBlock
-2. 在signalBlock中，创建RACSignal，并且作为signalBlock的返回值
-3. 执行命令 - (RACSignal *)execute:(id)input
-
 * RACCommand使用注意:
 signalBlock必须要返回一个信号，不能传nil。
 如果不想要传递信号，直接创建空的信号[RACSignal empty]。
