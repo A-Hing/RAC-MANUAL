@@ -3,8 +3,6 @@ RAC中用于处理事件的类，可以把事件如何处理,事件中的数据�
 使用场景:监听按钮点击，网络请求。
 
 
-```
-
 // 代码区域的上下分别用三个括起来|Prefix  |Framework   |
 |--------|------------|
 |NS      |Foundation (OS X and iOS) and Application Kit (OS X)  |
@@ -15,7 +13,6 @@ RAC中用于处理事件的类，可以把事件如何处理,事件中的数据�
     // 代码缩进请使用 四个空格，不要使用 Tab
 }
 
-```
 
 - (void)ah_RACCommand {
     // 1.创建命令类
