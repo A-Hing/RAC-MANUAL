@@ -29,6 +29,7 @@ RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> s
 2016-03-20 13:02:59.134 RACDemo[45388:5236769] 接收数据：1
 2016-03-20 13:02:59.134 RACDemo[45388:5236769] 发送请求
 2016-03-20 13:02:59.135 RACDemo[45388:5236769] 接收数据：1
+```
 
 ```
 
@@ -64,6 +65,5 @@ RACMulticastConnection *connect = [signal publish];
 2016-03-20 13:05:13.803 RACDemo[45398:5237395] 发送请求
 2016-03-20 13:05:13.804 RACDemo[45398:5237395] 订阅者一信号
 2016-03-20 13:05:13.804 RACDemo[45398:5237395] 订阅者二信号
-
 
 ```
