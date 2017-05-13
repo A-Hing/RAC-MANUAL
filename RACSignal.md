@@ -30,6 +30,9 @@
 6. 执行RACDisposable的disposeBlock中的代码。
 
 
+
+####代码
+
 ```
     // 1.创建信号
     RACSignal *siganl = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -58,3 +61,9 @@
     }];
 
 ```
+
+```
+2017-05-13 10:51:55.476 DesignPattern[65036:1842467] 接收到数据:1
+2017-05-13 10:51:55.476 DesignPattern[65036:1842467] 信号被销毁
+```
+
