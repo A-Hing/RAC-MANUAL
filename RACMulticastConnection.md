@@ -23,6 +23,8 @@ RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> s
 
 
 ```
+
+```
 2016-03-20 13:02:59.130 RACDemo[45388:5236769] 发送请求
 2016-03-20 13:02:59.134 RACDemo[45388:5236769] 接收数据：1
 2016-03-20 13:02:59.134 RACDemo[45388:5236769] 发送请求
@@ -32,6 +34,8 @@ RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> s
 
 运行结果，会执行两遍发送请求，也就是每次订阅都会发送一次请求。
 
+
+```
 
 ```
 // RACMulticastConnection:解决重复请求问题
