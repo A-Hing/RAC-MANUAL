@@ -42,7 +42,9 @@ ReactiveCocoa处理
 RAC(self.viewModel, userName) = self.tfUserName.rac_textSignal;
 RAC(self.viewModel, password) = self.tfPassword.rac_textSignal;
 RAC(self.btLogin, enabled) = [self.viewModel validSignal];
+```
 
+```
 //viewModel
 - (RACSignal *)validSignal {
     RACSignal *validSignal = [RACSignal combineLatest:@[_userNameSignal, _passwordSignal]
