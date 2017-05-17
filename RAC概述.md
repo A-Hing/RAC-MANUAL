@@ -23,3 +23,29 @@ ReactiveCocoa操作的核心方法是bind（绑定），而且RAC中核心开发
 * 清洁工：RACDisposable 及其子类。
 
 其中，信号源又是最核心的部分，其他组件都是围绕它运作的。
+
+
+####优势
+
+OC处理
+
+1. 通过实现UITextField的代理
+在 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string; 
+2. 方法中获取输入的文字，赋值给username属性和password属性
+3. 再判断username和password是否符合要求
+4. 再设置按钮的enabled属性
+
+
+ReactiveCocoa处理
+
+```
+RAC(self.viewModel, userName) = self.tfUserName.rac_textSignal;
+RAC(self.viewModel, password) = self.tfPassword.rac_textSignal;
+RAC(self.btLogin, enabled) = [self.viewModel validSignal];
+
+```
+
+
+
+
+
