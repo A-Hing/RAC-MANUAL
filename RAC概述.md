@@ -43,6 +43,16 @@ RAC(self.viewModel, userName) = self.tfUserName.rac_textSignal;
 RAC(self.viewModel, password) = self.tfPassword.rac_textSignal;
 RAC(self.btLogin, enabled) = [self.viewModel validSignal];
 
+//viewModel
+- (RACSignal *)validSignal {
+    RACSignal *validSignal = [RACSignal combineLatest:@[_userNameSignal, _passwordSignal]
+                                               reduce:^id(NSString *userName, NSString *password){
+        // 要求用户名和密码大于6位数
+        return @(userName.length >= 6 && password.length >= 6);
+    }];
+    return validSignal;
+}
+
 ```
 
 
