@@ -52,12 +52,3 @@ self.button.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(i
 }
 
 ```
-
-####UITextField
-
-```
-    [[self.verifyCodeView.verifyCodeField rac_signalForControlEvents:UIControlEventEditingDidEndOnExit] subscribeNext:^(id x) {
-        NSLog(@"%s", __func__);
-    }];
-    
-```
