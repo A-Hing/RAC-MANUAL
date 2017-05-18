@@ -1,6 +1,6 @@
 
 
-####textField输入有变化时，产生next事件
+#####textField输入有变化时，产生next事件
 
 ```
 [self.usernameTextField.rac_textSignal subscribeNext:^(id x){  
@@ -8,7 +8,7 @@
 }]; 
 ```
 
-####UITextField
+#####UITextField监听键盘的Return键
 
 ```
     [[self.verifyCodeView.verifyCodeField rac_signalForControlEvents:UIControlEventEditingDidEndOnExit] subscribeNext:^(id x) {
